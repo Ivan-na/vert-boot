@@ -11,10 +11,18 @@ package com.moma.vertxboot.beans;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import io.vertx.core.Vertx;
 
 /**
- * <p>Company: itic</p>
+ * Vert-x Configurations
+ * 	- Instance
+ *  - ObjectMapper(JSON)
+ * <p>
+ * Company: itic
+ * </p>
  * 
  * @author: Ivan
  * @date: Jun 12, 2017 2:51:42 PM
@@ -23,31 +31,31 @@ import io.vertx.core.Vertx;
 @Configuration
 public class ConfigurationVertX {
 
-    private Vertx vertx;
+	private Vertx vertx;
 
-    /**
-     * A singleton instance of {@link Vertx} which is used throughout the
-     * application
-     * 
-     * @return An instance of {@link Vertx}
-     */
-    @Bean
-    public Vertx getVertxInstance() {
-        if (this.vertx == null) {
-            this.vertx = Vertx.vertx();
-        }
-        return this.vertx;
-    }
+	/**
+	 * A singleton instance of {@link Vertx} which is used throughout the
+	 * application
+	 * 
+	 * @return An instance of {@link Vertx}
+	 */
+	@Bean
+	public Vertx getVertxInstance() {
+		if (this.vertx == null) {
+			this.vertx = Vertx.vertx();
+		}
+		return this.vertx;
+	}
 
-    /**
-     * Create an {@link ObjectMapper} for use in (de)serializing objects to/from
-     * JSON
-     * 
-     * @return An instance of {@link ObjectMapper}
-     */
-    @Bean
-    public ObjectMapper objectMapper() {
-        return new ObjectMapper(new JsonFactory());
-    
-        
+	/**
+	 * Create an {@link ObjectMapper} for use in (de)serializing objects to/from
+	 * JSON
+	 * 
+	 * @return An instance of {@link ObjectMapper}
+	 */
+	@Bean
+	public ObjectMapper objectMapper() {
+		return new ObjectMapper(new JsonFactory());
+	}
+
 }

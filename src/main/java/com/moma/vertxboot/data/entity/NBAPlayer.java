@@ -18,86 +18,109 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * <p>Company: itic</p>
+ * <p>
+ * Company: itic
+ * </p>
  * 
  * @author: Ivan
  * @date: Jun 12, 2017 2:34:40 PM
  * @version: V1.0
  */
 @Entity
-@Table(name = "customers")
-public class NBAPlayer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @JsonProperty("id")
-    private String id;
+@Table(name = "NBAPlayer")
+public class NBAPlayer implements java.io.Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7595489252329014078L;
 
-    @Column
-    @JsonProperty("first_name")
-    private String firstName;
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@JsonProperty("id")
+	private Long id;
 
-    @Column
-    @JsonProperty("last_name")
-    private String lastName;
+	@Column
+	@JsonProperty("first_name")
+	private String firstName;
 
-    @Column
-    @JsonProperty("team")
-    private String team;
+	@Column
+	@JsonProperty("last_name")
+	private String lastName;
 
-    @Column
-    @JsonProperty("play_no")
-    private String playNo;
+	@Column
+	@JsonProperty("team")
+	private String team;
 
-    @Column
-    @JsonProperty("rating")
-    private String rating;
+	@Column
+	@JsonProperty("play_no")
+	private String playNo;
 
-    public String getId() {
-        return id;
-    }
+	@Column
+	@JsonProperty("rating")
+	private String rating;
 
-    public void setId(String id) {
-        this.id = id;
-    }
+	@SuppressWarnings("unused")
+	private NBAPlayer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public NBAPlayer(Long id, String firstName, String lastName, String team, String playNo, String rating) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.team = team;
+		this.playNo = playNo;
+		this.rating = rating;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public String getTeam() {
-        return team;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public void setTeam(String team) {
-        this.team = team;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public String getPlayNo() {
-        return playNo;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public void setPlayNo(String playNo) {
-        this.playNo = playNo;
-    }
+	public String getTeam() {
+		return team;
+	}
 
-    public String getRating() {
-        return rating;
-    }
+	public void setTeam(String team) {
+		this.team = team;
+	}
 
-    public void setRating(String rating) {
-        this.rating = rating;
-    }
+	public String getPlayNo() {
+		return playNo;
+	}
+
+	public void setPlayNo(String playNo) {
+		this.playNo = playNo;
+	}
+
+	public String getRating() {
+		return rating;
+	}
+
+	public void setRating(String rating) {
+		this.rating = rating;
+	}
 
 }
