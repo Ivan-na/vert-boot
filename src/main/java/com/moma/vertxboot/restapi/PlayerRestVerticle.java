@@ -45,7 +45,7 @@ import io.vertx.ext.web.handler.BodyHandler;
 @Component
 public class PlayerRestVerticle {
 	// Port No.
-	private final Integer port = 8080;
+	private final Integer port = 8081;
 
 	@Autowired
 	private NBAPlayerDAO dao;
