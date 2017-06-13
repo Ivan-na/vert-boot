@@ -1,0 +1,89 @@
+
+8081 vert-x
+
+siege -c 1000 -r 10 
+Transactions:		       10000 hits
+Availability:		      100.00 %
+Elapsed time:		        4.14 secs
+Data transferred:	        2.04 MB
+Response time:		        0.01 secs
+Transaction rate:	     2415.46 trans/sec
+Throughput:		        0.49 MB/sec
+Concurrency:		       35.83
+Successful transactions:       10000
+Failed transactions:	           0
+Longest transaction:	        0.26
+Shortest transaction:	        0.00
+
+siege -c 2000 -r 10
+Transactions:		       20000 hits
+Availability:		      100.00 %
+Elapsed time:		        4.76 secs
+Data transferred:	        4.08 MB
+Response time:		        0.08 secs
+Transaction rate:	     4201.68 trans/sec
+Throughput:		        0.86 MB/sec
+Concurrency:		      318.97
+Successful transactions:       20000
+Failed transactions:	           0
+Longest transaction:	        0.55
+Shortest transaction:	        0.00
+
+siege -c 3000 -r 10
+Transactions:		       29968 hits
+Availability:		       99.89 %
+Elapsed time:		       35.68 secs
+Data transferred:	        6.12 MB
+Response time:		        0.50 secs
+Transaction rate:	      839.91 trans/sec
+Throughput:		        0.17 MB/sec
+Concurrency:		      422.83
+Successful transactions:       29968
+Failed transactions:	          32
+Longest transaction:	       30.22
+Shortest transaction:	        0.00
+
+8080 MVC Controller
+siege -c 1000 -r 10 
+Transactions:		       10000 hits
+Availability:		      100.00 %
+Elapsed time:		        4.64 secs
+Data transferred:	        2.04 MB
+Response time:		        0.02 secs
+Transaction rate:	     2155.17 trans/sec
+Throughput:		        0.44 MB/sec
+Concurrency:		       49.15
+Successful transactions:       10000
+Failed transactions:	           0
+Longest transaction:	        1.09
+
+Shortest transaction:	        0.00
+siege -c 2000 -r 10 
+Transactions:		       20000 hits
+Availability:		      100.00 %
+Elapsed time:		        5.66 secs
+Data transferred:	        4.08 MB
+Response time:		        0.12 secs
+Transaction rate:	     3533.57 trans/sec
+Throughput:		        0.72 MB/sec
+Concurrency:		      408.83
+Successful transactions:       20000
+Failed transactions:	           0
+Longest transaction:	        1.54
+Shortest transaction:	        0.00
+
+siege -c 3000 -r 10 
+Transactions:		       29991 hits
+Availability:		       99.97 %
+Elapsed time:		      126.42 secs
+Data transferred:	        6.12 MB
+Response time:		       11.72 secs
+Transaction rate:	      237.23 trans/sec
+Throughput:		        0.05 MB/sec
+Concurrency:		     2780.10
+Successful transactions:       29991
+Failed transactions:	           9
+Longest transaction:	       61.23
+Shortest transaction:	        0.00
+
+
